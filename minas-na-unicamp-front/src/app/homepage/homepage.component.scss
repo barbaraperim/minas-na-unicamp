@@ -1,0 +1,22 @@
+.row {
+  background-color: white;
+  height: calc(100% - 64px);
+  width: 100%;
+}
+
+.col-6 {
+  display: grid;
+  align-content: center;
+  &.grid-text {
+    justify-content: center;
+    padding-left: 80px;
+    font-family: Montserrat, "Helvetica Neue", sans-serif !important;
+  }
+  &.grid-image {
+    justify-items: center;
+  }
+}
+
+img {
+  width: 80%;
+}

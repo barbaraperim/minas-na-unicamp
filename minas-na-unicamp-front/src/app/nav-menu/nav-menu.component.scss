@@ -1,0 +1,51 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navigation-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+mat-toolbar {
+  border-radius: 3px;
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 300px;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.title {
+  font-weight: 200;
+  font-size: 20px;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+}
+
+.title_link {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.forms_link {
+  text-decoration: none;
+}
+
+.title_div {
+  margin-right: 20px;
+}
+
+.content {
+  height: 94%;
+}

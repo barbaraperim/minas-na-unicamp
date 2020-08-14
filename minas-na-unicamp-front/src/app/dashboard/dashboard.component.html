@@ -1,0 +1,59 @@
+<div class="content">
+  <div class="row">
+    <div class="col-12">
+      <h1 style="font-family: Montserrat, 'Helvetica Neue', sans-serif">Dashboard de Alertas</h1>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <figure class="highcharts-figure">
+            <div style="height:300px;" id="container"></div>
+          </figure>
+          <div #mapContainer id="map"></div>
+        </div>
+        <div class="col-md-6">
+          <div class="row filter-params">
+            <div class="col-md-3">
+              <mat-form-field appearance="fill">
+                <mat-select class="local-filter-select" [(ngModel)]="filter.local">
+                  <mat-option class="local-filter-option" [value]="option.name" *ngFor="let option of places">{{ option.name }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field class="full-width">
+                <input class="text-filter" matInput [(ngModel)]="filter.text">
+              </mat-form-field>
+            </div>
+
+          </div>
+          <div class="row filter-button">
+            <div class="col-md-3">
+              <button mat-flat-button color="primary" class="button-filter full-width" (click)="filterAlerts()">Filtrar</button>
+            </div>
+          </div>
+          <div class="row alerts-container">
+            <div class="col-md-12">
+              <div class="row" *ngFor="let alert of filter.result">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-10 alerts-title">{{alert.local}}</div>
+                    <div class="col-md-2">{{alert.hour}}</div>
+                  </div>
+                  <div clas="row alerts-hour">
+                    <b>Horário:</b>{{alert.time}}
+                  </div>
+                  <div clas="row alerts-description">
+                    <b>Descrição:</b>{{alert.description}}
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

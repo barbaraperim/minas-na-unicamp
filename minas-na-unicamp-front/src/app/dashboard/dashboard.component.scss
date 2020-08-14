@@ -1,0 +1,45 @@
+#map {
+  height: 500px;
+  width: 100%;
+}
+
+.filter-params{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.filter-button {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 30px;
+}
+
+.content{
+  padding: 50px
+}
+
+.full-width{
+  width: 100%;
+}
+
+.alerts-container{
+  height: 700px;
+  overflow: auto;
+}
+
+.alerts-title{
+  font-size: 28px;
+  color: #2e2727;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.alerts-hour{
+  padding: 10px;
+  padding-bottom: 0px;
+}
+
+.alerts-description{
+  padding: 10px;
+}

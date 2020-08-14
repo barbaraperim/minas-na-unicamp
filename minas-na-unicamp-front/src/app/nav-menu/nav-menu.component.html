@@ -1,0 +1,91 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    class="sidenav"
+    #drawer
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+  >
+    <mat-toolbar color="primary">
+      <a class="title_link" routerLink="/">
+        <span class="title">Minas na Unicamp</span>
+      </a>
+      <mat-divider [vertical]="true"></mat-divider>
+      <mat-nav-list>
+        <mat-list-item>
+          <a class="title_link" routerLink="/dashboard">
+            <button mat-button>
+              <span class="title_link">Dashboard</span>
+            </button>
+          </a>
+        </mat-list-item>
+        <mat-list-item>
+          <a class="title_link" routerLink="/informacoes">
+            <button mat-button>
+              <span class="title_link">Informações</span>
+            </button>
+          </a>
+        </mat-list-item>
+        <mat-list-item>
+          <a class="title_link" routerLink="/estatisticas">
+            <button mat-button>
+              <span class="title_link">Estatísticas</span>
+            </button>
+          </a>
+        </mat-list-item>
+        <mat-list-item>
+          <a class="title_link" routerLink="/formulario">
+            <button mat-button>
+              <span class="title_link">Formulário</span>
+            </button>
+          </a>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-toolbar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div fxHide.gt-xs>
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      </div>
+      <div class="title_div">
+        <a class="title_link" routerLink="/">
+          <button mat-button>
+            <span class="title">Minas na Unicamp</span>
+          </button>
+        </a>
+      </div>
+      <div fxFlex fxLayout="row" fxLayoutAlign="start" fxHide.xs>
+        <ul class="navigation-items" fxLayout>
+          <mat-list-item routerLink="/dashboard">
+            <button mat-button>
+              <span class="title_link">Dashboard</span>
+            </button>
+          </mat-list-item>
+          <mat-list-item>
+            <a class="title_link" routerLink="/informacoes">
+              <button mat-button>
+                <span class="title_link">Informações</span>
+              </button>
+            </a>
+          </mat-list-item>
+          <mat-list-item routerLink="/estatisticas">
+            <button mat-button>
+              <span class="title_link">Estatísticas</span>
+            </button>
+          </mat-list-item>
+          <mat-list-item routerLink="/formulario">
+            <button mat-button><span class="title_link">Formulário</span></button>
+          </mat-list-item>
+        </ul>
+      </div>
+    </mat-toolbar>
+    <div class="row content">
+      <div class="col-md-12">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

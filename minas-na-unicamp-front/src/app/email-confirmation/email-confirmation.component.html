@@ -1,0 +1,11 @@
+<div class="confirmation-box">
+  <div class="card--confirmation">
+    <h2>Obrigada por se registrar!</h2>
+    <div *ngIf="authService.userData as user">
+      <p class="text-center">Nós enviamos um email de confirmação para <strong>{{user.email}}</strong>.</p>
+      <p class="text-center">Por favor verifique seu email e clique no link de confirmação.</p>
+    </div>
+    <button class="button--confirmation" (click)="resendEmail()">Reenviar email de verificação</button>
+  </div>
+  <a href="" class="login" routerLink="../login">Fazer login</a>
+</div>

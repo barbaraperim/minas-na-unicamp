@@ -1,0 +1,39 @@
+<div class="content">
+    <div class="row">
+        <div class="col-12 formulario">
+            <h1 style="font-family: Montserrat, 'Helvetica Neue', sans-serif">Formulário de Alerta</h1>
+            <div class="row justify-content-center ">
+                <mat-card style="width: 100%">
+                    <mat-card-title>        
+                    <div [formGroup]="alertForm">
+                      <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Horário:</mat-label>
+                            <input matInput [ngxTimepicker]="picker" formControlName="time" required>
+                            <ngx-material-timepicker #picker></ngx-material-timepicker>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Localização</mat-label>
+                            <mat-select matInput formControlName="local" required>
+                                <mat-option *ngFor="let place of places" [value]="place">
+                                    {{place.name}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Descrição:</mat-label>
+                            <textarea matInput class="form-control" formControlName="description" required> </textarea>
+                        </mat-form-field>
+                      </div>
+
+                        <div class="row justify-content-center">
+                            <button mat-flat-button class="col-2" class="submit-button" color="primary" (click)="submitAlert()">Enviar</button>
+                        </div>
+                        <mat-card-content>
+                        </mat-card-content>
+                    </mat-card-title>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+
+</div>

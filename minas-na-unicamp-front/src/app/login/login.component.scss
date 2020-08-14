@@ -1,0 +1,56 @@
+:host {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 30px;
+}
+
+.card--login {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .24);
+  .mat-form-field {
+    width: 100%;
+  }
+}
+
+.button--login {
+  color: white;
+  background: #673ab7;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 1em;
+  cursor: pointer;
+  &:disabled {
+    background: gray;
+  }
+}
+
+.register {
+  color: #673ab7;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.forgot-link {
+  color: #673ab7;
+}
+
+.card--controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

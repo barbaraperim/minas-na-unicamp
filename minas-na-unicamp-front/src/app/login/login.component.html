@@ -1,0 +1,23 @@
+<form (submit)="login()" class="login-box">
+  <div class="card--login">
+    <p style="text-align: center">Para fazer alertas sem revelar sua identidade, escolha a opção de entrar anonimamente</p>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput name="email" [(ngModel)]="user.userId">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" name="password" [(ngModel)]="user.passwordHash">
+      </mat-form-field>
+    </div>
+    <div class="card--controls">
+      <a href="" class="forgot-link" routerLink="../esqueci-senha">Esqueci a senha</a>
+    </div>
+  </div>
+  <button type="submit" class="button--login" [disabled]="isEmpty()">Login</button>
+  <button type="button" class="button--login" (click)="signInAnonymously()">Entrar anonimamente</button>
+  <a href="" class="register" routerLink="../cadastro">Criar nova conta</a>
+</form>

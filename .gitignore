@@ -1,45 +1,45 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/minas-na-unicamp-front/dist
-/minas-na-unicamp-front/tmp
-/minas-na-unicamp-front/out-tsc
+/dist
+/tmp
+/out-tsc
 # Only exists if Bazel was run
-/minas-na-unicamp-front/bazel-out
+/bazel-out
 
 # dependencies
-/minas-na-unicamp-front/node_modules
+/node_modules
 
 # profiling files
-/minas-na-unicamp-front/chrome-profiler-events*.json
-/minas-na-unicamp-front/speed-measure-plugin*.json
+chrome-profiler-events*.json
+speed-measure-plugin*.json
 
 # IDEs and editors
-/minas-na-unicamp-front/.idea
-/minas-na-unicamp-front/.project
-/minas-na-unicamp-front/.classpath
+/.idea
+.project
+.classpath
 .c9/
-/minas-na-unicamp-front/*.launch
-/minas-na-unicamp-front/.settings/
-/minas-na-unicamp-front/*.sublime-workspace
+*.launch
+.settings/
+*.sublime-workspace
 
 # IDE - VSCode
-/minas-na-unicamp-front/.vscode/*
-!/minas-na-unicamp-front/.vscode/settings.json
-!/minas-na-unicamp-front/.vscode/tasks.json
-!/minas-na-unicamp-front/.vscode/launch.json
-!/minas-na-unicamp-front/.vscode/extensions.json
-./minas-na-unicamp-front/history/*
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
 
 # misc
-/minas-na-unicamp-front/.sass-cache
-/minas-na-unicamp-front/connect.lock
-/minas-na-unicamp-front/coverage
-/minas-na-unicamp-front/libpeerconnection.log
-/minas-na-unicamp-front/npm-debug.log
-/minas-na-unicamp-front/yarn-error.log
-/minas-na-unicamp-front/testem.log
-/minas-na-unicamp-front/typings
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
 
 # System Files
 .DS_Store
